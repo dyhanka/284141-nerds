@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet">
     <title>Nёrds: Магазин</title>
   </head>
   <body>
@@ -9,7 +10,7 @@
       <div class="container">
         <div class="logo">
           <a href="index.html">
-            <img src="#" alt="Nёrds" width="140px" height="60px">
+            <img src="img/nerds-logo.png" alt="Nёrds" width="160px" height="65px"></img>
           </a>
         </div>
 
@@ -41,23 +42,28 @@
     <main>
       <div class="settings">
         <form action="#" method="post">
-          <h3>Стоимость:</h3>
-          <div class="range">
-            <input type="range" min="0" max="15000">
+          <h3 class="filter">Стоимость:</h3>
+          <div class="range-filter">
+           <div class="range-controls">
+             <div class="scale">
+               <div class="bar">
+               </div>
+             </div>
+             <div class="toggle min-toggle"></div>
+             <div class="toggle max-toggle"></div>
+           </div>
+           <div class="price-controls">
+             от <input class="min-price" type="text" value="0">
+             до <input class="max-price" type="text" value="15000">
+           </div>
           </div>
-          <label class="price">От
-            <input id="min-price" type="text" value="0">
-          </label>
-          <label class="price">До
-            <input id="max-price" type="text" value="15000">
-          </label>
 
-          <h3>Сетка:</h3>
+          <h3 class="filter">Сетка:</h3>
           <input id="radio-1" type="radio" checked><label for="radio-1">Адаптивная</label>
           <input id="radio-2" type="radio"><label for="radio-2">Фиксированная</label>
           <input id="radio-3" type="radio"><label for="radio-3">Резиновая</label>
 
-          <h3>Особенности:</h3>
+          <h3 class="filter">Особенности:</h3>
           <input id="checkbox-1" type="checkbox" checked=""><label for="checkbox-1">Слайдер</label>
           <input id="checkbox-2" type="checkbox"><label for="checkbox-2">Блок преимуществ</label>
           <input id="checkbox-3" type="checkbox" checked=""><label for="checkbox-3">Новости</label>
@@ -69,9 +75,18 @@
       </div>
 
       <div class="templates">
-
+        <h3 class="filter">Сортировать:</h3>
+        <ul>
+          <li><a href="#" class="sort-type">По цене</a></li>
+          <li><a href="#" class="sort-type">По типу</a></li>
+          <li><a href="#" class="sort-type">По функционалу</a></li>
+        </ul>
+        <div class="sort-direction">
+          <a href="#">&#9660</a>
+          <a href="#">&#9650</a>
+        </div>
         <div class="template-item">
-          <img class="template-img" src="#" width="240px" height="340px">
+          <img class="template-img" src="img/template-sedona.jpg" width="360px" height="576px">
           <div class="template-description">
             <a class="template-caption" href="#">Sedona</a>
             <p>Информационный сайт для туристов</p>
@@ -80,46 +95,46 @@
         </div>
 
         <div class="template-item">
-          <img class="template-img" src="#" width="240px" height="340px">
-          <div class="template-description">
-            <a class="template-caption" href="#">Sedona</a>
-            <p>Информационный сайт для туристов</p>
-            <a class="btn" href="#">9 900 руб.</a>
-          </div>
-        </div>
-
-        <div class="template-item">
-          <img class="template-img" src="#" width="240px" height="340px">
+          <img class="template-img" src="img/template-pink.jpg" width="360px" height="576px">
           <div class="template-description">
             <a class="template-caption" href="#">Pink</a>
-            <p>Информационный сайт для туристов</p>
+            <p>Pink</p>
             <a class="btn" href="#">9 900 руб.</a>
           </div>
         </div>
 
         <div class="template-item">
-          <img class="template-img" src="#" width="240px" height="340px">
+          <img class="template-img" src="img/template-barbershop.jpg" width="360px" height="576px">
+          <div class="template-description">
+            <a class="template-caption" href="#">Borodinski</a>
+            <p>Borodinski</p>
+            <a class="btn" href="#">9 900 руб.</a>
+          </div>
+        </div>
+
+        <div class="template-item">
+          <img class="template-img" src="img/template-mishka.jpg" width="360px" height="576px">
           <div class="template-description">
             <a class="template-caption" href="#">Mishka</a>
-            <p>Информационный сайт для туристов</p>
+            <p>Mishka</p>
             <a class="btn" href="#">9 900 руб.</a>
           </div>
         </div>
 
         <div class="template-item">
-          <img class="template-img" src="#" width="240px" height="340px">
+          <img class="template-img" src="img/template-aplus.jpg" width="360px" height="576px">
           <div class="template-description">
             <a class="template-caption" href="#">A plus</a>
-            <p>Информационный сайт для туристов</p>
+            <p>A plus</p>
             <a class="btn" href="#">9 900 руб.</a>
           </div>
         </div>
 
         <div class="template-item">
-          <img class="template-img" src="#" width="240px" height="340px">
+          <img class="template-img" src="img/template-kvast.jpg" width="360px" height="576px">
           <div class="template-description">
             <a class="template-caption" href="#">Кваст</a>
-            <p>Информационный сайт для туристов</p>
+            <p>Кваст</p>
             <a class="btn" href="#">9 900 руб.</a>
           </div>
         </div>
@@ -136,7 +151,7 @@
     <footer>
       <div class="footer-map">
         <div class="footer-address">
-          <h4>Nёrds Design Studio</h4>
+          <h4 class="footer-nerds">Nёrds Design Studio</h4>
           <p>
             191186, Санкт-Петербург,<br>
             ул. Б. Конюшенная, д. 19/8<br>

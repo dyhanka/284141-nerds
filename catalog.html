@@ -7,7 +7,7 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="container">
+      <div class="container clearfix">
         <div class="logo">
           <a href="index.html">
             <img src="img/nerds-logo.png" alt="Nёrds" width="160px" height="65px"></img>
@@ -32,6 +32,7 @@
         </nav>
 
         <div class="cart">
+          <div class="icon-cart"></div>
           <a href="#">Корзина</a>
         </div>
       </div>
@@ -39,9 +40,9 @@
       <h1>Магазин готовых шаблонов</h1>
     </header>
 
-    <main>
-      <div class="settings">
-        <form action="#" method="post">
+    <main class="main-catalog clearfix">
+      <div class="settings-left">
+        <form action="#" method="get">
           <h3 class="filter">Стоимость:</h3>
           <div class="range-filter">
            <div class="range-controls">
@@ -74,22 +75,27 @@
         </form>
       </div>
 
-      <div class="templates">
-        <h3 class="filter">Сортировать:</h3>
-        <ul>
-          <li><a href="#" class="sort-type">По цене</a></li>
-          <li><a href="#" class="sort-type">По типу</a></li>
-          <li><a href="#" class="sort-type">По функционалу</a></li>
-        </ul>
-        <div class="sort-direction">
-          <a href="#">&#9660</a>
-          <a href="#">&#9650</a>
+      <div class="templates-right">
+        <div class="sort">
+          <h3 class="filter">Сортировать:</h3>
+          <ul>
+            <li><a href="#" class="sort-type">По цене</a></li>
+            <li><a href="#" class="sort-type">По типу</a></li>
+            <li><a href="#" class="sort-type">По функционалу</a></li>
+          </ul>
+
+          <div class="sort-direction">
+            <a href="#">&#9660</a>
+            <a href="#">&#9650</a>
+          </div>
         </div>
-        <div class="template-item">
+
+        <div class="templates">
+          <div class="template-item">
           <img class="template-img" src="img/template-sedona.jpg" width="360px" height="576px">
           <div class="template-description">
             <a class="template-caption" href="#">Sedona</a>
-            <p>Информационный сайт для туристов</p>
+            <p class="template-details">Информационный сайт для туристов</p>
             <a class="btn" href="#">9 900 руб.</a>
           </div>
         </div>
@@ -98,7 +104,7 @@
           <img class="template-img" src="img/template-pink.jpg" width="360px" height="576px">
           <div class="template-description">
             <a class="template-caption" href="#">Pink</a>
-            <p>Pink</p>
+            <p class="template-details">Pink</p>
             <a class="btn" href="#">9 900 руб.</a>
           </div>
         </div>
@@ -107,7 +113,7 @@
           <img class="template-img" src="img/template-barbershop.jpg" width="360px" height="576px">
           <div class="template-description">
             <a class="template-caption" href="#">Borodinski</a>
-            <p>Borodinski</p>
+            <p class="template-details">Borodinski</p>
             <a class="btn" href="#">9 900 руб.</a>
           </div>
         </div>
@@ -116,7 +122,7 @@
           <img class="template-img" src="img/template-mishka.jpg" width="360px" height="576px">
           <div class="template-description">
             <a class="template-caption" href="#">Mishka</a>
-            <p>Mishka</p>
+            <p class="template-details">Mishka</p>
             <a class="btn" href="#">9 900 руб.</a>
           </div>
         </div>
@@ -125,7 +131,7 @@
           <img class="template-img" src="img/template-aplus.jpg" width="360px" height="576px">
           <div class="template-description">
             <a class="template-caption" href="#">A plus</a>
-            <p>A plus</p>
+            <p class="template-details">A plus</p>
             <a class="btn" href="#">9 900 руб.</a>
           </div>
         </div>
@@ -134,22 +140,23 @@
           <img class="template-img" src="img/template-kvast.jpg" width="360px" height="576px">
           <div class="template-description">
             <a class="template-caption" href="#">Кваст</a>
-            <p>Кваст</p>
+            <p class="template-details">Кваст</p>
             <a class="btn" href="#">9 900 руб.</a>
           </div>
         </div>
+      </div>
 
         <ul class="paginator">
-          <li>1</li>
+          <li><a class="currentpage">1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
-          <li><a href="#">Следующая</a></li>
+          <li><a class="nextpage" href="#">Следующая</a></li>
         </ul>
       </div>
     </main>
 
     <footer>
-      <div class="footer-map">
+      <div class="footer-map clearfix">
         <div class="footer-address">
           <h4 class="footer-nerds">Nёrds Design Studio</h4>
           <p>
@@ -161,14 +168,14 @@
         </div>
       </div>
 
-      <div class="footer-bottom">
+      <div class="footer-bottom clearfix">
         <div class="footer-social">
-          <a href="#" class="social-btn">Vkontakte</a>
-          <a href="#" class="social-btn">Facebook</a>
-          <a href="#" class="social-btn">Instagram</a>
+          <a href="#" class="social-btn"></a>
+          <a href="#" class="social-btn"></a>
+          <a href="#" class="social-btn"></a>
         </div>
         <div class="footer-discount">
-          <p>Давайте дружить, это выгодно!</p>
+          <b class="discount">Давайте дружить, это выгодно!</b>
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </div>

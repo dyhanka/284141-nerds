@@ -99,21 +99,10 @@ b.discount {
   background-color: #eeeeee;
 }
 
-.container,
-.slider,
-.service,
-.description,
-.projects,
-.footer-map,
-.footer-bottom,
-.main-catalog {
-  width: 1160px;
-  margin: 0 auto;
-}
-
 .container {
-  padding-top: 48px;
-  background-color: lightyellow;
+  width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .logo {
@@ -151,7 +140,6 @@ b.discount {
 }
 
 .navigation {
-  width: 442px;
   float: left;
   padding: 0 60px;
 }
@@ -267,7 +255,8 @@ div.description-right>div {
   opacity: 0.2;
 }
 
-.line {
+/*
+.project-logo::after {
   display: inline-block;
   width: 2px;
   min-height: 52px;
@@ -275,10 +264,11 @@ div.description-right>div {
   vertical-align: middle;
   margin-right: 20px;
 }
+*/
 
 .project-logo:last-child {
   width: 260px;
-  padding-right: 0px;
+  padding-right: 0;
 }
 
   /* Сетка footer */
@@ -298,6 +288,7 @@ div.description-right>div {
 
 .footer-social {
   width: 360px;
+  font-size: 0px;
   float: left;
   margin-right: 40px;
 }
@@ -327,13 +318,67 @@ div.description-right>div {
   background-image: url("../img/insta-icon.png");
 }
 
+/* Каталог */
 .main-header h1 {
   width: 780px;
   margin: 0 auto;
 }
 
-.main-catalog {
-  background-color: lightblue;
+.settings-left .filter {
+  margin-top: 50px;
+}
+
+/* Меню сортировки */
+.sort {
+  margin: 50px 0 50px 0;
+}
+
+.sort .filter {
+  margin: 0 40px 0 0;
+  width: 360px;
+  float: left;
+}
+
+.sort-list {
+  float: left;
+  padding: 0;
+  margin: 0;
+  font-size: 0px;
+  list-style-type: none;
+}
+
+.sort-list li {
+  display: inline-block;
+  margin-right: 22px;
+}
+
+.sort-direction {
+  float: right;
+}
+
+.sort-direction > a {
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.sort-type {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Фильтры */
+
+.main-catalog input[type="radio"] + label {
+	display: block;
+}
+
+.main-catalog input[type="checkbox"] + label {
+	display: block;
 }
 
 .settings-left {
@@ -342,6 +387,7 @@ div.description-right>div {
   background-color: lightyellow;
 }
 
+/* Шаблоны */
 
 .templates-right {
   width: 760px;
@@ -379,22 +425,25 @@ div.description-right>div {
   background-color: #eeeeee;
 }
 
-.paginator {
+/* Пагинация */
+
+ul.paginator {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 60px 0 0 0;
+  font-size: 0px;
 }
 
 .paginator li {
   display: inline-block;
   margin-right: 5px;
-  margin-top: 60px;
+  vertical-align: top;
 }
 
 .paginator li a {
   display: block;
   min-width: 50px;
-  height: 50px;
+  min-height: 50px;
   font-size: 16px;
   line-height: 18px;
   background-color: #eeeeee;
@@ -404,8 +453,8 @@ div.description-right>div {
 }
 
 .paginator .currentpage {
-  width: 44px;
-  height: 44px;
+  min-height: 44px;
+  min-width: 44px;
   border: 3px solid #eeeeee;
   background-color: #ffffff;
 }

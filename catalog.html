@@ -23,7 +23,7 @@
               <a href="#">Клиенты</a>
             </li>
             <li>
-              <a>Магазин</a>
+              <a class="active-link">Магазин</a>
             </li>
             <li>
               <a href="#">Контакты</a>
@@ -45,24 +45,22 @@
         <form action="#" method="get">
           <h3 class="filter">Стоимость:</h3>
           <div class="range-filter">
-           <div class="range-controls">
-             <div class="scale">
-               <div class="bar">
-               </div>
-             </div>
-             <div class="toggle min-toggle"></div>
-             <div class="toggle max-toggle"></div>
-           </div>
-           <div class="price-controls">
-             от <input class="min-price" type="text" value="0">
-             до <input class="max-price" type="text" value="15000">
-           </div>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+            </div>
+            <div class="price-controls">
+              <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+              <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+            </div>
           </div>
-
           <h3 class="filter">Сетка:</h3>
-          <input id="radio-1" type="radio" checked><label for="radio-1">Адаптивная</label>
-          <input id="radio-2" type="radio"><label for="radio-2">Фиксированная</label>
-          <input id="radio-3" type="radio"><label for="radio-3">Резиновая</label>
+          <input id="radio-1" type="radio" checked><label class="radio-label" for="radio-1">Адаптивная</label>
+          <input id="radio-2" type="radio"><label class="radio-label" for="radio-2">Фиксированная</label>
+          <input id="radio-3" type="radio"><label class="radio-label" for="radio-3">Резиновая</label>
 
           <h3 class="filter">Особенности:</h3>
           <input id="checkbox-1" type="checkbox" checked=""><label for="checkbox-1">Слайдер</label>
@@ -71,7 +69,7 @@
           <input id="checkbox-4" type="checkbox"><label for="checkbox-4">Галерея</label>
           <input id="checkbox-5" type="checkbox"><label for="checkbox-5">Корзина</label>
 
-          <button class="btn" type="submit">Показать</button>
+          <button type="submit">Показать</button>
         </form>
       </div>
 
@@ -99,7 +97,6 @@
             <a class="btn" href="#">9 900 руб.</a>
           </div>
         </div>
-
         <div class="template-item">
           <img class="template-img" src="img/template-pink.jpg" width="360px" height="576px">
           <div class="template-description">
@@ -108,7 +105,6 @@
             <a class="btn" href="#">9 900 руб.</a>
           </div>
         </div>
-
         <div class="template-item">
           <img class="template-img" src="img/template-barbershop.jpg" width="360px" height="576px">
           <div class="template-description">
@@ -117,7 +113,6 @@
             <a class="btn" href="#">9 900 руб.</a>
           </div>
         </div>
-
         <div class="template-item">
           <img class="template-img" src="img/template-mishka.jpg" width="360px" height="576px">
           <div class="template-description">
@@ -126,7 +121,6 @@
             <a class="btn" href="#">9 900 руб.</a>
           </div>
         </div>
-
         <div class="template-item">
           <img class="template-img" src="img/template-aplus.jpg" width="360px" height="576px">
           <div class="template-description">
@@ -135,7 +129,6 @@
             <a class="btn" href="#">9 900 руб.</a>
           </div>
         </div>
-
         <div class="template-item">
           <img class="template-img" src="img/template-kvast.jpg" width="360px" height="576px">
           <div class="template-description">
@@ -161,8 +154,9 @@
           <h4 class="footer-nerds">Nёrds Design Studio</h4>
           <p>
             191186, Санкт-Петербург,<br>
-            ул. Б. Конюшенная, д. 19/8<br>
-            <span class="footer-phone">тел. +7(812)275-75-75</span>
+            ул. Б. Конюшенная, д. 19/8
+          </p>
+          <p class="footer-phone">тел. +7(812)275-75-75</p>
           </p>
           <a class="btn" href="#">Напишите нам</a>
         </div>

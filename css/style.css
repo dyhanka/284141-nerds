@@ -84,7 +84,6 @@ p.template-details {
 
 b.discount {
   font-size: 36px;
-  line-height: 36px;
 }
 
 /* Кнопки */
@@ -380,12 +379,12 @@ a.social-btn:active {
 }
 
 .slide {
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .slide-text {
@@ -425,9 +424,10 @@ p.slide-slogan {
     height: 4px;
     border: 2px solid #ffffff;
     background: #ffffff;
+    box-shadow: 0 0 0 4px #ffffff;
     border-radius: 50%;
-    vertical-align: top;
-
+    margin-right: 20px;
+    cursor: pointer;
 }
 
 i.control-active {
@@ -435,8 +435,9 @@ i.control-active {
   width: 4px;
   height: 4px;
   border: 2px solid #c1c1c1;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px #ffffff;
   border-radius: 50%;
-
 }
 
 .control-border {
@@ -520,15 +521,15 @@ i.control-active {
   position: relative;
   display: block;
   margin-bottom: 25px;
-  margin-left: 40px;
+  margin-left: 35px;
 }
 
 .desription-list li::before {
   position: absolute;
-  left: -40px;
+  left: -35px;
   content: "\2014\0020";
   color: #fb565a;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: lighter;
 }
 
@@ -615,6 +616,10 @@ div.description-right > div {
   vertical-align: middle;
 }
 
+.project-logo:hover::after, .project-logo:active::after {
+  opacity: 0.2;
+}
+
 .project-logo:nth-child(1)::after {
   left: 280px;
 }
@@ -681,8 +686,8 @@ p.footer-phone {
 }
 
 .footer-discount {
-  width: 560px;
   float: left;
+  line-height: 2em;
 }
 
 .social-btn {
@@ -742,10 +747,12 @@ p.footer-phone {
 
 .sort-direction {
   float: right;
+  margin: -3px;
 }
 
 .sort-direction > a {
   font-size: 14px;
+  opacity: 0.3;
   line-height: 18px;
   text-decoration: none;
   color: #000000;
@@ -754,15 +761,27 @@ p.footer-phone {
 .sort-type {
   font-size: 14px;
   line-height: 18px;
+  opacity: 0.3;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+}
+
+.sort-type:hover, .sort-direction > a:hover {
+  opacity: 0.6;
+}
+
+.sort-type:active, .sort-direction > a:active {
+  opacity: 1;
 }
 
 /* Фильтры */
 
 .main-catalog input[type="radio"] + label {
 	display: block;
+  position: relative;
+  margin-bottom: 25px;
+  margin-left: 34px;
 }
 
 .main-catalog input[type="radio"] {
@@ -771,10 +790,52 @@ p.footer-phone {
 
 .main-catalog input[type="checkbox"] + label {
 	display: block;
+  position: relative;
+  margin-bottom: 25px;
+  margin-left: 34px;
 }
 
 .main-catalog input[type="checkbox"] {
   display: none;
+}
+
+.radio-label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -34px;
+  width: 17px;
+  height: 17px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 4px solid #4d4d4d;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.radio-checked::before {
+  top: 2px;
+  left: -31px;
+  box-sizing: border-box;
+  width: 17px;
+  height: 17px;
+  background: #4d4d4d;
+  border: 5px solid #ffffff;
+  box-shadow: 0 0 0 4px #4d4d4d;
+}
+
+.checkbox-label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -34px;
+  width: 17px;
+  height: 17px;
+  background: #ffffff;
+  border-radius: 6px;
+  border: 4px solid #4d4d4d;
+  opacity: 0.4;
+  cursor: pointer;
 }
 
 .settings-left {

@@ -115,14 +115,16 @@ b.discount {
 .slide a.btn:hover,
 .service-item:nth-child(1) > a:hover,
 .footer-address > a:hover,
-a.social-btn:hover {
+a.social-btn:hover,
+.feedback-submit:hover {
   background-color: #e74246;
 }
 
 .slide a.btn:active,
 .service-item:nth-child(1) > a:active,
 .footer-address > a:active,
-a.social-btn:active {
+a.social-btn:active,
+.feedback-submit:active {
   background-color: #d7373b;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -174,9 +176,7 @@ a.social-btn:active {
 .range-controls {
   position: relative;
   height: 41px;
-  padding-top: 39px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 39px 20px 15px 20px;
   margin-bottom: 15px;
   border-radius: 5px;
   background: #f1f1f1;
@@ -253,6 +253,7 @@ a.social-btn:active {
   color: #000000;
   text-transform: uppercase;
   border-radius: 3px;
+  outline: none;
 }
 
 .settings-left button[type="submit"]:hover {
@@ -719,6 +720,11 @@ p.footer-phone {
 
 .settings-left .filter {
   margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.settings-left .filter:first-child {
+  padding-bottom: 30px;
 }
 
 /* Меню сортировки */
@@ -780,7 +786,7 @@ p.footer-phone {
 .main-catalog input[type="radio"] + label {
 	display: block;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   margin-left: 34px;
 }
 
@@ -791,7 +797,7 @@ p.footer-phone {
 .main-catalog input[type="checkbox"] + label {
 	display: block;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   margin-left: 34px;
 }
 
@@ -808,7 +814,7 @@ p.footer-phone {
   height: 17px;
   background: #ffffff;
   border-radius: 50%;
-  border: 4px solid #4d4d4d;
+  border: 4px solid #000000;
   opacity: 0.4;
   cursor: pointer;
 }
@@ -819,23 +825,42 @@ p.footer-phone {
   box-sizing: border-box;
   width: 17px;
   height: 17px;
-  background: #4d4d4d;
+  background: #000000;
   border: 5px solid #ffffff;
-  box-shadow: 0 0 0 4px #4d4d4d;
+  box-shadow: 0 0 0 4px #000000;
+  opacity: 0.4;
 }
 
 .checkbox-label::before {
   content: "";
   position: absolute;
-  top: -2px;
-  left: -34px;
-  width: 17px;
-  height: 17px;
+  top: 0px;
+  left: -31px;
+  width: 19px;
+  height: 19px;
   background: #ffffff;
-  border-radius: 6px;
-  border: 4px solid #4d4d4d;
+  border-radius: 4px;
+  border: 2px solid #000000;
   opacity: 0.4;
   cursor: pointer;
+}
+
+.checkbox-checked::before {
+  top: 2px;
+  left: -31px;
+  width: 27px;
+  height: 23px;
+  box-sizing: border-box;
+  background: url("../img/checkbox-on.png") no-repeat;
+  background-position: top;
+  border: none;
+}
+
+.checkbox-label:hover::before,
+.checkbox-checked:hover::before,
+.radio-label:hover::before,
+.radio-checked:hover::before {
+  opacity: 1;
 }
 
 .settings-left {
@@ -848,6 +873,11 @@ p.footer-phone {
 .main-catalog {
   margin-top: -50px;
 }
+
+.settings-left > form > h3 {
+  margin-bottom: 50px;
+}
+
 .templates-right {
   width: 760px;
   float: right;
@@ -856,8 +886,9 @@ p.footer-phone {
 .templates {
   width: 760px;
   padding: 0;
-  margin: 0;
+  margin-top: 0;
   font-size: 0px;
+  padding-top: 70px;
 }
 
 .template-item {
@@ -872,7 +903,7 @@ p.footer-phone {
 .template-item::before {
   content: "";
   display: block;
-  width: 360px;
+  width: 361px;
   height: 40px;
   background-image: url("../img/template-browser.png");
   background-repeat: no-repeat;
@@ -884,10 +915,10 @@ p.footer-phone {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 0px;
   display: none;
   z-index: -1;
-  width: 360px;
+  width: 359px;
   height: 288px;
   box-shadow: 0 0 15px 6px #000101;
   opacity: 0.25;
@@ -901,7 +932,6 @@ p.footer-phone {
   opacity: 1;
 }
 
-
 .template-item:nth-child(even) {
   margin-right: 0;
 }
@@ -909,11 +939,11 @@ p.footer-phone {
 .template-description {
   position: absolute;
   bottom: 0;
-  left: 1px;
+  left: 0px;
   display: none;
   font-size: 16px;
   text-align: center;
-  width: 360px;
+  width: 362px;
   min-height: 200px;
   padding: 0;
   margin: 0;
@@ -990,4 +1020,122 @@ ul.paginator {
 .paginator a.currentpage:active {
   box-shadow: none;
   color: #000000;
+}
+
+/* Форма обратной связи */
+
+.feedback {
+  position: fixed;
+  left: 24%;
+  bottom: 190px;
+  z-index: 100;
+  width: 960px;
+  min-height: 590px;
+  padding: 67px 100px 0 100px;
+  background: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
+  display: none;
+}
+
+.feedback {
+  display: block;
+}
+
+.feedback-close {
+  position: absolute;
+  top: 80px;
+  right: 90px;
+  width: 21px;
+  height: 21px;
+  background: url("../img/close-cross.png") no-repeat;
+  font-size: 0;
+  border: 0;
+  outline: 0;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.feedback-close:hover {
+  opacity: 1;
+}
+
+.feedback-close:active {
+  opacity: 0.1;
+}
+
+.feedback-title {
+  margin: 0 0 40px 0;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.feedback-form input {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Roboto", "Arial", sans-serif;
+  line-height: 18px;
+  color: #444444;
+  border: 2px solid #d7dcde;
+  box-sizing: border-box;
+  border-radius: 2px;
+  outline: none;
+}
+
+.feedback-field-1 label,
+.feedback-field-2 label,
+.feedback-field-3 label {
+  display: block;
+  width: 360px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  overflow: hidden;
+}
+
+.feedback-field-1 input,
+.feedback-field-2 input {
+  width: 360px;
+  min-height: 50px;
+  margin-top: 9px;
+  margin-bottom: 33px;
+  padding: 0 12px;
+}
+
+.feedback-field-1 {
+  float: left;
+}
+
+.feedback-field-2 {
+  float: right;
+}
+
+.feedback-field-3 {
+  clear: both;
+  width: 100%;
+}
+
+.feedback-field-3 input {
+  width: 100%;
+  margin-top: 9px;
+  padding: 0 12px;
+  padding-top: 11px;
+  padding-bottom: 85px;
+}
+
+.feedback-submit {
+  width: 260px;
+  height: 50px;
+  margin-top: 48px;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.feedback-form input:hover {
+  border: 2px solid #b4b9bb;
+}
+
+.feedback-form input:focus {
+  border: 2px solid #000000;
 }
